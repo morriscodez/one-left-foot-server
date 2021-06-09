@@ -3,6 +3,6 @@ from django.contrib.auth.models import User
 
 class DanceUser(models.Model):
 
-    user = models.OneToOneField(User, on_delete=models.DO_NOTHING)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.CharField(max_length=500)
     img = models.ImageField
