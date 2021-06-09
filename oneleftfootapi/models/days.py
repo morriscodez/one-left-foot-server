@@ -1,5 +1,5 @@
 from django.db import models
 
-class Days(models.Model):
+class Day(models.Model):
 
     day = models.CharField(max_length=7)
