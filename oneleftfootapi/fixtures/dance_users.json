@@ -16,5 +16,23 @@
             "bio": "cheap swayze imitation",
             "img": "swayze_gmzgvp.jpg"
         }
-    }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "bio": "nobody puts me in the corner",
+            "img": "baby_vxfqbe.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "bio": "Dance is the meaning of life",
+            "img": "penny_nqfylz.jpg"
+        }
+    },
 ]
