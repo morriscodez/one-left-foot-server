@@ -71,4 +71,76 @@
             "img": "nina_uczdpa.jpg"
         }
     },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 9,
+        "fields": {
+            "user": 9,
+            "bio": "There's not enough lattes in the world",
+            "img": "odile_ce9rrs.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 10,
+        "fields": {
+            "user": 10,
+            "bio": "In a world where no one understands, it's good to find someone who can",
+            "img": "tiffany_nms1j5.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 11,
+        "fields": {
+            "user": 11,
+            "bio": "You have to do everything you can. You have to work your hardest and if you do, if you stay positive, you have a shot at a silver lining.",
+            "img": "pat_xr36s8.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 12,
+        "fields": {
+            "user": 12,
+            "bio": "It's funny, isn't it? How one moment can change a million after it.",
+            "img": "raya_xaxi9u.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 13,
+        "fields": {
+            "user": 13,
+            "bio": "You can dance if you want to. You can leave your friends behind.",
+            "img": "david_ax0ovo.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 14,
+        "fields": {
+            "user": 14,
+            "bio": "Up on the roof, oh yeah. 100 proof, oh yeah. I'm feelin' fine, oh yeah. Drink cherry wine, oh yeah.",
+            "img": "ren_qi9ad6.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 15,
+        "fields": {
+            "user": 14,
+            "bio": "I just don't know that I believe in everything you believe in. But I believe in you.",
+            "img": "ariel_h406qk.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 16,
+        "fields": {
+            "user": 14,
+            "bio": "I only got a seventh-grade education, but I have a doctorate in funk, and I like to put that to good use.",
+            "img": "james_lnvbjn.jpg"
+        }
+    }
 ]

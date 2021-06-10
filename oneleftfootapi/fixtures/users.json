@@ -145,15 +145,15 @@
     },
     {
         "model": "auth.user",
-        "pk": 2,
+        "pk": 9,
         "fields": {
             "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
             "last_login": null,
             "is_superuser": false,
-            "username": "p.swayz2",
-            "first_name": "Patrick",
-            "last_name": "Swayze's Evil Twin",
-            "email": "patrick@swayze2.com",
+            "username": "BlackSwan",
+            "first_name": "Odile",
+            "last_name": "Rothbart",
+            "email": "odile@swan.com",
             "is_staff": false,
             "is_active": true,
             "date_joined": "2019-10-10T19:12:13.676Z",
@@ -163,15 +163,15 @@
     },
     {
         "model": "auth.user",
-        "pk": 2,
+        "pk": 10,
         "fields": {
             "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
             "last_login": null,
             "is_superuser": false,
-            "username": "p.swayz2",
-            "first_name": "Patrick",
-            "last_name": "Swayze's Evil Twin",
-            "email": "patrick@swayze2.com",
+            "username": "SilverSpoon",
+            "first_name": "Tiffany",
+            "last_name": "Maxwell",
+            "email": "tiffany@maxwell.com",
             "is_staff": false,
             "is_active": true,
             "date_joined": "2019-10-10T19:12:13.676Z",
@@ -181,15 +181,15 @@
     },
     {
         "model": "auth.user",
-        "pk": 2,
+        "pk": 11,
         "fields": {
             "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
             "last_login": null,
             "is_superuser": false,
-            "username": "p.swayz2",
-            "first_name": "Patrick",
-            "last_name": "Swayze's Evil Twin",
-            "email": "patrick@swayze2.com",
+            "username": "SilverLining",
+            "first_name": "Pat",
+            "last_name": "Solitano",
+            "email": "pat@solitano.com",
             "is_staff": false,
             "is_active": true,
             "date_joined": "2019-10-10T19:12:13.676Z",
@@ -197,5 +197,95 @@
             "user_permissions": []
         }
     },
+    {
+        "model": "auth.user",
+        "pk": 12,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "DancingQueen",
+            "first_name": "Raya",
+            "last_name": "Green",
+            "email": "raya@green.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T19:12:13.676Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 13,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "DancePrince",
+            "first_name": "David",
+            "last_name": "Green",
+            "email": "david@green.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T19:12:13.676Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 14,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "CutARug999",
+            "first_name": "Ren",
+            "last_name": "McCormack",
+            "email": "ren@mccormack.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T19:12:13.676Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 15,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "DanceFan",
+            "first_name": "Ariel",
+            "last_name": "Moore",
+            "email": "ariel@moore.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T19:12:13.676Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 16,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "HardestWorkingMan",
+            "first_name": "James",
+            "last_name": "Brown",
+            "email": "james@brown.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T19:12:13.676Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
 ]
     
