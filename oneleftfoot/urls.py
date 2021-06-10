@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 from django.conf.urls import include
-from oneleftfootapi.views import login_user, register_user
+from oneleftfootapi.views import login_user, register_user, DanceUserView
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'danceusers', DanceUserView, 'danceuser')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
