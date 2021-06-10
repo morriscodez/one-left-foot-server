@@ -53,4 +53,22 @@
             "img": "vincent_qdgaxq.jpg"
         }
     },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 7,
+        "fields": {
+            "user": 7,
+            "bio": "My husband, your boss, told you to take me out. I want to dance, I want to win. I want that trophy, so dance good.",
+            "img": "mia_femtpf.jpg.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 8,
+        "fields": {
+            "user": 8,
+            "bio": "I just want to be perfect.",
+            "img": "nina_uczdpa.jpg"
+        }
+    },
 ]
