@@ -129,7 +129,7 @@
         "model": "oneleftfootapi.danceuser",
         "pk": 15,
         "fields": {
-            "user": 14,
+            "user": 15,
             "bio": "I just don't know that I believe in everything you believe in. But I believe in you.",
             "img": "ariel_h406qk.jpg"
         }
@@ -138,7 +138,7 @@
         "model": "oneleftfootapi.danceuser",
         "pk": 16,
         "fields": {
-            "user": 14,
+            "user": 16,
             "bio": "I only got a seventh-grade education, but I have a doctorate in funk, and I like to put that to good use.",
             "img": "james_lnvbjn.jpg"
         }
