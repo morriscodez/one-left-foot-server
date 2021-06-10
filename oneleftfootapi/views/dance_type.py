@@ -3,12 +3,25 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from oneleftfootapi.models import DanceType
+from oneleftfootapi.models import DanceType, dance_type
 from django.contrib.auth.models import User
-
+from django.core.exceptions import ValidationError
 
 class DanceTypeView(ViewSet):
 
+    def create(self, request):
+
+        dance_type = DanceType()
+        dance_type.label = request.data["label"]
+        
+        try:
+            dance_type.save()
+            serializer = DanceTypeSerializer(dance_type, context={'request': request})
+            return Response(serializer.data)
+        
+        except ValidationError as ex:
+            return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
+    
     def list(self, request):
 
         dance_types = DanceType.objects.all()
