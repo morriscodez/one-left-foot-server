@@ -23,7 +23,9 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'danceusers', DanceUserView, 'danceuser')
 
 urlpatterns = [
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('register', register_user),
     path('login', login_user),
+
 ]

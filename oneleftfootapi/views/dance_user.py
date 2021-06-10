@@ -68,15 +68,16 @@ class DanceUserView(ViewSet):
 
 
 
-class UserSerializer(serializers.Serializer):
+class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
         fields = ('id', 'first_name', 'last_name', 'username', 'email')
 
-class DanceUserSerializer(serializers.Serializer):
+class DanceUserSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
 
     class Meta:
         model = DanceUser
-        fields = ('id', 'bio', 'img')
+        fields = ('id', 'bio', 'img', 'user')
 
