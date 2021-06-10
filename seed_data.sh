@@ -11,7 +11,7 @@ python3 manage.py loaddata dance_users
 python3 manage.py loaddata dance_types
 python3 manage.py loaddata skill_level
 # python3 manage.py loaddata dance_type_join
-# python3 manage.py loaddata days
+python3 manage.py loaddata days
 # python3 manage.py loaddata availability
 
 

@@ -4,7 +4,6 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 from oneleftfootapi.models import SkillLevel
-from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
 
