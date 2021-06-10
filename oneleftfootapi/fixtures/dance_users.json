@@ -1,0 +1,11 @@
+[
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "Patrick Swayze Bio",
+            "img": "swayze_gmzgvp.jpg"
+        }
+    }
+]
