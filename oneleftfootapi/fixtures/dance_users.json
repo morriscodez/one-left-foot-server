@@ -7,5 +7,14 @@
             "bio": "Patrick Swayze Bio",
             "img": "swayze_gmzgvp.jpg"
         }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "bio": "cheap swayze imitation",
+            "img": "swayze_gmzgvp.jpg"
+        }
     }
 ]
