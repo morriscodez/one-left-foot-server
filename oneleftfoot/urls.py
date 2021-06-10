@@ -17,11 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 from django.conf.urls import include
-from oneleftfootapi.views import login_user, register_user, DanceUserView, DanceTypeView
+from oneleftfootapi.views import login_user, register_user, DanceUserView, DanceTypeView, SkillLevelView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'danceusers', DanceUserView, 'danceuser')
 router.register(r'dancetypes', DanceTypeView, 'dancetype')
+router.register(r'skilllevels', SkillLevelView, 'skilllevel')
 
 urlpatterns = [
     path('', include(router.urls)),

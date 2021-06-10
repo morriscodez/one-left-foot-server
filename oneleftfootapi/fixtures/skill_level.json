@@ -1,5 +1,23 @@
 [
     {
-        
+        "model": "oneleftfootapi.skilllevel",
+        "pk": 1,
+        "fields": {
+            "label": "Beginner"
+        }
+    },
+    {
+        "model": "oneleftfootapi.skilllevel",
+        "pk": 2,
+        "fields": {
+            "label": "Intermediate"
+        }
+    },
+    {
+        "model": "oneleftfootapi.skilllevel",
+        "pk": 3,
+        "fields": {
+            "label": "Advanced"
+        }
     }
 ]
