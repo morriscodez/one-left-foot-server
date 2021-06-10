@@ -1,5 +1,156 @@
 [
     {
-        
-    }
+        "model": "oneleftfootapi.dancetype",
+        "pk": 1,
+        "fields": {
+            "label": "Salsa"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 2,
+        "fields": {
+            "label": "Bachata"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 3,
+        "fields": {
+            "label": "Merengue"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 4,
+        "fields": {
+            "label": "Cha Cha Cha"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 5,
+        "fields": {
+            "label": "Mambo"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 6,
+        "fields": {
+            "label": "Samba"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 7,
+        "fields": {
+            "label": "Rumba"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 8,
+        "fields": {
+            "label": "Tango"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 9,
+        "fields": {
+            "label": "Foxtrot"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 10,
+        "fields": {
+            "label": "Waltz"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 11,
+        "fields": {
+            "label": "Bolero"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 12,
+        "fields": {
+            "label": "Lambada"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 13,
+        "fields": {
+            "label": "Kizomba"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 14,
+        "fields": {
+            "label": "Zouk"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 15,
+        "fields": {
+            "label": "Blues"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 16,
+        "fields": {
+            "label": "East-Coast Swing"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 17,
+        "fields": {
+            "label": "West-Coast Swing"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 18,
+        "fields": {
+            "label": "Lindy Hop"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 19,
+        "fields": {
+            "label": "Balboa"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 20,
+        "fields": {
+            "label": "Charleston"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 21,
+        "fields": {
+            "label": "St. Louis Shag"
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 22,
+        "fields": {
+            "label": "Carolina Shag"
+        }
+    }    
 ]

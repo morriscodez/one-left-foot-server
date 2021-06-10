@@ -3,7 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from oneleftfootapi.models import DanceUser, dance_user
+from oneleftfootapi.models import DanceUser
 from django.contrib.auth.models import User
 
 
