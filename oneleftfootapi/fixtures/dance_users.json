@@ -35,4 +35,22 @@
             "img": "penny_nqfylz.jpg"
         }
     },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 5,
+        "fields": {
+            "user": 5,
+            "bio": "Living for those Havana Nights",
+            "img": "javier_gzbpza.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 6,
+        "fields": {
+            "user": 6,
+            "bio": "I didn't go to Burger King",
+            "img": "vincent_qdgaxq.jpg"
+        }
+    },
 ]
