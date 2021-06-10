@@ -46,7 +46,16 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'oneleftfootapi',
+    'cloudinary',
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dcmrgodiq',
+    'API_KEY': env("CLOUDINARY_SECRET_KEY"),
+    'API_SECRET': env('CLOUDINARY_API_KEY'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

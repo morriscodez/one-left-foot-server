@@ -11,6 +11,8 @@ djangorestframework = "*"
 django-cors-headers = "*"
 pylint-django = "*"
 django-environ = "*"
+cloudinary = "*"
+dj3-cloudinary-storage = "*"
 
 [dev-packages]
 
