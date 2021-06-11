@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "user": 1,
-            "bio": "Patrick Swayze Bio",
+            "bio": "Now, you'll hurt me if you don't trust me, alright?",
             "img": "swayze_gmzgvp.jpg"
         }
     },
@@ -15,6 +15,132 @@
             "user": 2,
             "bio": "cheap swayze imitation",
             "img": "swayze_gmzgvp.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "bio": "Nobody puts me in the corner",
+            "img": "baby_vxfqbe.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "bio": "Oh, come on, Ladies. God wouldn't have given you maracas if he didn't want you to shake 'em.",
+            "img": "penny_nqfylz.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 5,
+        "fields": {
+            "user": 5,
+            "bio": "Where's the revolution tonight? On the dance floor?",
+            "img": "javier_gzbpza.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 6,
+        "fields": {
+            "user": 6,
+            "bio": "I didn't go to Burger King",
+            "img": "vincent_qdgaxq.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 7,
+        "fields": {
+            "user": 7,
+            "bio": "My husband, your boss, told you to take me out. I want to dance, I want to win. I want that trophy, so dance good.",
+            "img": "mia_femtpf.jpg.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 8,
+        "fields": {
+            "user": 8,
+            "bio": "I just want to be perfect.",
+            "img": "nina_uczdpa.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 9,
+        "fields": {
+            "user": 9,
+            "bio": "There's not enough lattes in the world",
+            "img": "odile_ce9rrs.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 10,
+        "fields": {
+            "user": 10,
+            "bio": "In a world where no one understands, it's good to find someone who can",
+            "img": "tiffany_nms1j5.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 11,
+        "fields": {
+            "user": 11,
+            "bio": "You have to do everything you can. You have to work your hardest and if you do, if you stay positive, you have a shot at a silver lining.",
+            "img": "pat_xr36s8.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 12,
+        "fields": {
+            "user": 12,
+            "bio": "It's funny, isn't it? How one moment can change a million after it.",
+            "img": "raya_xaxi9u.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 13,
+        "fields": {
+            "user": 13,
+            "bio": "You can dance if you want to. You can leave your friends behind.",
+            "img": "david_ax0ovo.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 14,
+        "fields": {
+            "user": 14,
+            "bio": "Up on the roof, oh yeah. 100 proof, oh yeah. I'm feelin' fine, oh yeah. Drink cherry wine, oh yeah.",
+            "img": "ren_qi9ad6.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 15,
+        "fields": {
+            "user": 15,
+            "bio": "I just don't know that I believe in everything you believe in. But I believe in you.",
+            "img": "ariel_h406qk.jpg"
+        }
+    },
+    {
+        "model": "oneleftfootapi.danceuser",
+        "pk": 16,
+        "fields": {
+            "user": 16,
+            "bio": "I only got a seventh-grade education, but I have a doctorate in funk, and I like to put that to good use.",
+            "img": "james_lnvbjn.jpg"
         }
     }
 ]

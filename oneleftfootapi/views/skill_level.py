@@ -3,29 +3,41 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from oneleftfootapi.models import DanceUser
-from django.contrib.auth.models import User
+from oneleftfootapi.models import SkillLevel
+from django.core.exceptions import ValidationError
 
 
+class SkillLevelView(ViewSet):
 
+    def create(self, request):
 
-class DanceUserView(ViewSet):
+        skill_level = SkillLevel()
+        skill_level.label = request.data["label"]
+        
+        try:
+            skill_level.save()
+            serializer = SkillLevelSerializer(skill_level, context={'request': request})
+            return Response(serializer.data)
+        
+        except ValidationError as ex:
+            return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
 
+    
     def list(self, request):
 
-        dance_users = DanceUser.objects.all()
+        skill_levels = SkillLevel.objects.all()
 
-        serializer = DanceUserSerializer(
-            dance_users, many=True, context={'request': request}
+        serializer = SkillLevelSerializer(
+            skill_levels, many=True, context={'request': request}
         )
         return Response(serializer.data)
-
+    
     
     def retrieve(self, request, pk=None):
         try:
-            dance_user = DanceUser.objects.get(pk=pk)
+            skill_level = SkillLevel.objects.get(pk=pk)
             
-            serializer = DanceUserSerializer(dance_user, context={'request': request})
+            serializer = SkillLevelSerializer(skill_level, context={'request': request})
             return Response(serializer.data)
         
         except Exception as ex:
@@ -39,11 +51,10 @@ class DanceUserView(ViewSet):
             Response -- Empty body with 204 status code
         """
         
-        user = DanceUser.objects.get(pk=pk)
-        user.bio = request.data["bio"]
-        user.img = request.data["img"]
+        type = SkillLevel.objects.get(pk=pk)
+        type.label = request.data["label"]
         
-        user.save()
+        type.save()
     
         return Response({}, status=status.HTTP_204_NO_CONTENT)
 
@@ -55,12 +66,12 @@ class DanceUserView(ViewSet):
             Response -- 200, 404, or 500 status code
         """
         try:
-            user = DanceUser.objects.get(pk=pk)
-            user.delete()
+            type = SkillLevel.objects.get(pk=pk)
+            type.delete()
 
             return Response({}, status=status.HTTP_204_NO_CONTENT)
 
-        except DanceUser.DoesNotExist as ex:
+        except SkillLevel.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as ex:
@@ -68,16 +79,8 @@ class DanceUserView(ViewSet):
 
 
 
-class UserSerializer(serializers.ModelSerializer):
+class SkillLevelSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = User
-        fields = ('id', 'first_name', 'last_name', 'username', 'email')
-
-class DanceUserSerializer(serializers.ModelSerializer):
-    user = UserSerializer()
-
-    class Meta:
-        model = DanceUser
-        fields = ('id', 'bio', 'img', 'user')
-
+        model = SkillLevel
+        fields = ('id', 'label')
