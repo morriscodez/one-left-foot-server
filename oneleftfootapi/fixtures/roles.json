@@ -1,0 +1,16 @@
+[
+    {
+        "model": "oneleftfootapi.role",
+        "pk": 1,
+        "fields": {
+            "label": "Leader"
+        }
+    },
+    {
+        "model": "oneleftfootapi.role",
+        "pk": 2,
+        "fields": {
+            "label": "Follower"
+        }
+    }
+]

@@ -5,7 +5,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from oneleftfootapi.models import DanceTypeJoin, DanceUser, DanceType, SkillLevel
+from oneleftfootapi.models import DanceTypeJoin, DanceUser, DanceType, SkillLevel, Role
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
@@ -17,11 +17,12 @@ class DanceTypeJoinView(ViewSet):
         dancer = DanceUser.objects.get(pk=request.data["danceUserId"])
         type = DanceType().objects.get(pk=request.data["danceTypeId"])
         skill = SkillLevel.objects.get(pk=request.data["skillLevelId"])
+        role = Role.objects.get(pk=request.data["roleId"])
 
         new_dance.dance_user = dancer
         new_dance.dance_type = type
         new_dance.skill_level = skill
-        new_dance.role = request.data["role"]
+        new_dance.role = role
 
         try:
             new_dance.save()
@@ -64,11 +65,13 @@ class DanceTypeJoinView(ViewSet):
         dancer = DanceUser.objects.get(pk=request.data["danceUserId"])
         type = DanceType.objects.get(pk=request.data["danceTypeId"])
         skill = SkillLevel.objects.get(pk=request.data["skillLevelId"])
+        role = Role.objects.get(pk=request.data["roleId"])
+
 
         new_dance.dance_user = dancer
         new_dance.dance_type = type
         new_dance.skill_level = skill
-        new_dance.role = request.data["role"]
+        new_dance.role = role
 
         
         new_dance.save()
@@ -95,6 +98,12 @@ class DanceTypeJoinView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+
+class RoleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Role
+        fields = ('id', 'label')
 
 class SkillLevelSerializer(serializers.ModelSerializer):
 
@@ -126,6 +135,7 @@ class DanceTypeJoinSerializer(serializers.ModelSerializer):
     dance_user = DanceUserSerializer()
     dance_type = DanceTypeSerializer()
     skill_level = SkillLevelSerializer()
+    role = RoleSerializer()
 
     class Meta:
         model = DanceTypeJoin
