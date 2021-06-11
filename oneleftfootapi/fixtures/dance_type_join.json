@@ -5,7 +5,7 @@
         "fields": {
             "dance_user_id": 1,
             "dance_type_id": 23,
-            "skill_level_id": 1,
+            "skill_level_id": 3,
             "role": "Leader"
         }
     },
