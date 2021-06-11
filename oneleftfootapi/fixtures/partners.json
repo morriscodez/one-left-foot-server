@@ -1,5 +1,114 @@
 [
     {
-        
+        "model": "oneleftfootapi.partner",
+        "pk": 1,
+        "fields": {
+            "leader_id": 1,
+            "follower_id": 3
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 2,
+        "fields": {
+            "leader_id": 5,
+            "follower_id": 4
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 3,
+        "fields": {
+            "leader_id": 6,
+            "follower_id": 7
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 4,
+        "fields": {
+            "leader_id": 9,
+            "follower_id": 8
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 5,
+        "fields": {
+            "leader_id": 11,
+            "follower_id": 10
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 6,
+        "fields": {
+            "leader_id": 13,
+            "follower_id": 12
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 7,
+        "fields": {
+            "leader_id": 14,
+            "follower_id": 15
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 8,
+        "fields": {
+            "leader_id": 16,
+            "follower_id": 4
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 9,
+        "fields": {
+            "leader_id": 16,
+            "follower_id": 7
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 10,
+        "fields": {
+            "leader_id": 16,
+            "follower_id": 8
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 11,
+        "fields": {
+            "leader_id": 16,
+            "follower_id": 9
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 12,
+        "fields": {
+            "leader_id": 16,
+            "follower_id": 10
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 13,
+        "fields": {
+            "leader_id": 16,
+            "follower_id": 12
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 14,
+        "fields": {
+            "leader_id": 16,
+            "follower_id": 15
+        }
     }
 ]
