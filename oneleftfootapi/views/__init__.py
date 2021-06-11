@@ -6,3 +6,4 @@ from .days import DayView
 from .availability import AvailabilityView
 from .partners import PartnerView
 from .dance_type_join import DanceTypeJoinView
+from .role import RoleView
