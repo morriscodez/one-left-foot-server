@@ -1,3 +1,4 @@
+from django.db.models.fields import PositiveSmallIntegerField
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -55,17 +56,17 @@ class AvailabilityView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        
-        window = Availability()
+
+        window = Availability.objects.get(pk=pk)
         dancer = DanceUser.objects.get(pk=request.data["danceUserId"])
-        day = Day().objects.get(pk=request.data["dayId"])
+        day = Day.objects.get(pk=request.data["dayId"])
         
         window.start = request.data["start"]
         window.end = request.data["end"]
         window.dance_user = dancer
         window.day = day
         
-        type.save()
+        window.save()
     
         return Response({}, status=status.HTTP_204_NO_CONTENT)
 
@@ -77,8 +78,8 @@ class AvailabilityView(ViewSet):
             Response -- 200, 404, or 500 status code
         """
         try:
-            type = Availability.objects.get(pk=pk)
-            type.delete()
+            window = Availability.objects.get(pk=pk)
+            window.delete()
 
             return Response({}, status=status.HTTP_204_NO_CONTENT)
 
