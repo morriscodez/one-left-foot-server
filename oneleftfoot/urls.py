@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 from django.conf.urls import include
-from oneleftfootapi.views import login_user, register_user, DanceUserView, DanceTypeView, SkillLevelView, DayView, AvailabilityView
+from oneleftfootapi.views import login_user, register_user, DanceUserView, DanceTypeView, \
+                                    SkillLevelView, DayView, AvailabilityView, PartnerView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'danceusers', DanceUserView, 'danceuser')
@@ -25,6 +26,7 @@ router.register(r'dancetypes', DanceTypeView, 'dancetype')
 router.register(r'skilllevels', SkillLevelView, 'skilllevel')
 router.register(r'days', DayView, 'day')
 router.register(r'availability', AvailabilityView, 'available')
+router.register(r'partners', PartnerView, 'partner')
 
 urlpatterns = [
     path('', include(router.urls)),

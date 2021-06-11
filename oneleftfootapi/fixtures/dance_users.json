@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "user": 1,
-            "bio": "Patrick Swayze Bio",
+            "bio": "Now, you'll hurt me if you don't trust me, alright?",
             "img": "swayze_gmzgvp.jpg"
         }
     },
@@ -22,7 +22,7 @@
         "pk": 3,
         "fields": {
             "user": 3,
-            "bio": "nobody puts me in the corner",
+            "bio": "Nobody puts me in the corner",
             "img": "baby_vxfqbe.jpg"
         }
     },
@@ -31,7 +31,7 @@
         "pk": 4,
         "fields": {
             "user": 4,
-            "bio": "Dance is the meaning of life",
+            "bio": "Oh, come on, Ladies. God wouldn't have given you maracas if he didn't want you to shake 'em.",
             "img": "penny_nqfylz.jpg"
         }
     },
@@ -40,7 +40,7 @@
         "pk": 5,
         "fields": {
             "user": 5,
-            "bio": "Living for those Havana Nights",
+            "bio": "Where's the revolution tonight? On the dance floor?",
             "img": "javier_gzbpza.jpg"
         }
     },

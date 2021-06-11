@@ -4,3 +4,4 @@ from .dance_type import DanceTypeView
 from .skill_level import SkillLevelView
 from .days import DayView
 from . availability import AvailabilityView
+from .partners import PartnerView
