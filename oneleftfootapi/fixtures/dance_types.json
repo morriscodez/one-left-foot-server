@@ -152,5 +152,12 @@
         "fields": {
             "label": "Carolina Shag"
         }
-    }    
+    },    
+    {
+        "model": "oneleftfootapi.dancetype",
+        "pk": 23,
+        "fields": {
+            "label": "Dirty Dancing"
+        }
+    }
 ]
