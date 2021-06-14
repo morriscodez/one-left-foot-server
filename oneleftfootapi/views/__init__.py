@@ -7,3 +7,4 @@ from .availability import AvailabilityView
 from .partners import PartnerView
 from .dance_type_join import DanceTypeJoinView
 from .role import RoleView
+from .profile import ProfileView
