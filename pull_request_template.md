@@ -1,5 +1,3 @@
-Description of PR that completes issue here...
-
 ## Changes
 
 - Item 1
@@ -48,5 +46,4 @@ Description of how to test code...
 
 ## Related Issues
 
-- Fixes #85
-- Fixes #22
+- Fixes #1
