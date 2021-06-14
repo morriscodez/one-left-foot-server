@@ -1,0 +1,2 @@
+UPDATE AUTH_USER
+SET password = 'pbkdf2_sha256$260000$MrB46VdcvPTmKgSnsBbsJ9$EdFy6htX8+N6GBS9LygP2qHA+K7DY1AAHMi9l+owqSw='
