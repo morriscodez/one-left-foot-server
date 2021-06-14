@@ -7,8 +7,9 @@ from oneleftfootapi.models import DanceUser
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 
-
-
+# from not folder => https://res.cloudinary.com/dcmrgodiq/image/upload/v1623339050/swayze_uwiqly.jpg
+# from folder=> https://res.cloudinary.com/dcmrgodiq/image/upload/v1623359013/One-Left-Foot/james_lnvbjn.jpg
+# from fetch db (currently)=> https://res.cloudinary.com/dcmrgodiq/image/upload/swayze_gmzgvp.jpg
 
 class ProfileView(ViewSet):
 
