@@ -32,7 +32,7 @@ class ProfileView(ViewSet):
         
         
         try:
-            dance_user = DanceUser.objects.get(user=request.auth.user)
+            dance_user = DanceUser.objects.get(pk=pk)
             
             serializer = DanceUserSerializer(dance_user, context={'request': request})
             return Response(serializer.data)
