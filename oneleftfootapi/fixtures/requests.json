@@ -9,7 +9,7 @@
     },
     {
         "model": "oneleftfootapi.request",
-        "pk": 1,
+        "pk": 2,
         "fields": {
             "sender_id": 9,
             "receiver_id": 1
