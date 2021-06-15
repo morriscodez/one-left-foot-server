@@ -1,9 +1,10 @@
+from oneleftfootapi.models.partners import Partner
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from oneleftfootapi.models import DanceUser
+from oneleftfootapi.models import DanceUser, Partner
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 
@@ -23,6 +24,8 @@ class ProfileView(ViewSet):
         
         except Exception as ex:
             return HttpResponseServerError(ex)
+
+        
 
     
     def retrieve(self, request, pk=None):
@@ -80,10 +83,52 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id', 'first_name', 'last_name', 'username', 'email')
 
-class DanceUserSerializer(serializers.ModelSerializer):
+
+
+class DancePartnerSerializer(serializers.ModelSerializer):
     user = UserSerializer()
 
     class Meta:
         model = DanceUser
         fields = ('id', 'bio', 'img', 'user')
 
+
+
+
+# class PartnerSerializer(serializers.ModelSerializer):
+#     leader = DancePartnerSerializer()
+#     follower = DancePartnerSerializer()
+
+#     class Meta:
+#         model = Partner
+#         fields = ('id', 'leader', 'follower')
+
+
+
+
+
+class LeaderSerializer(serializers.ModelSerializer):
+    follower = DancePartnerSerializer()
+
+    class Meta:
+        model = Partner()
+        fields = ('id', 'follower')
+
+class FollowerSerializer(serializers.ModelSerializer):
+    leader = DancePartnerSerializer()
+
+    class Meta:
+        model = Partner()
+        fields = ('id', 'leader')
+
+
+
+class DanceUserSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+    leader = LeaderSerializer(many=True)
+    follower = FollowerSerializer(many=True)
+
+    class Meta:
+        model = DanceUser
+        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower')
+        depth = 2

@@ -110,5 +110,29 @@
             "leader_id": 16,
             "follower_id": 15
         }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 15,
+        "fields": {
+            "leader_id": 1,
+            "follower_id": 4 
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 16,
+        "fields": {
+            "leader_id": 1,
+            "follower_id": 15
+        }
+    },
+    {
+        "model": "oneleftfootapi.partner",
+        "pk": 17,
+        "fields": {
+            "leader_id": 9,
+            "follower_id": 1
+        }
     }
 ]
