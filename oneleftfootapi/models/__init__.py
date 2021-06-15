@@ -6,3 +6,4 @@ from .days import Day
 from .partners import Partner
 from .skill_level import SkillLevel
 from .role import Role
+from .requests import Request

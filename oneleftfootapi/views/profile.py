@@ -4,7 +4,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from oneleftfootapi.models import DanceUser, Partner
+from oneleftfootapi.models import DanceUser, Partner, Request
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 
@@ -18,7 +18,15 @@ class ProfileView(ViewSet):
 
         try:
             dance_user = DanceUser.objects.get(user=request.auth.user)
-            
+
+            try:
+                requests = Request.objects.filter(receiver=dance_user)
+
+                dance_user.requests = requests
+
+            except Request.DoesNotExist as ex:
+                pass
+
             serializer = DanceUserSerializer(dance_user, context={'request': request})
             return Response(serializer.data)
         
@@ -77,13 +85,12 @@ class ProfileView(ViewSet):
 
 
 
+
 class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
         fields = ('id', 'first_name', 'last_name', 'username', 'email')
-
-
 
 class DancePartnerSerializer(serializers.ModelSerializer):
     user = UserSerializer()
@@ -91,21 +98,6 @@ class DancePartnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = DanceUser
         fields = ('id', 'bio', 'img', 'user')
-
-
-
-
-# class PartnerSerializer(serializers.ModelSerializer):
-#     leader = DancePartnerSerializer()
-#     follower = DancePartnerSerializer()
-
-#     class Meta:
-#         model = Partner
-#         fields = ('id', 'leader', 'follower')
-
-
-
-
 
 class LeaderSerializer(serializers.ModelSerializer):
     follower = DancePartnerSerializer()
@@ -121,14 +113,27 @@ class FollowerSerializer(serializers.ModelSerializer):
         model = Partner()
         fields = ('id', 'leader')
 
+class RequestUserSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
 
+    class Meta:
+        model = DanceUser
+        fields = ('id', 'bio', 'img', 'user')
+
+class RequestSerializer(serializers.ModelSerializer):
+    sender = RequestUserSerializer()
+
+    class Meta:
+        model = Request
+        fields = ('id', 'sender')
 
 class DanceUserSerializer(serializers.ModelSerializer):
     user = UserSerializer()
     leader = LeaderSerializer(many=True)
     follower = FollowerSerializer(many=True)
+    requests = RequestSerializer(many=True)
 
     class Meta:
         model = DanceUser
-        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower')
+        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower', 'requests')
         depth = 2

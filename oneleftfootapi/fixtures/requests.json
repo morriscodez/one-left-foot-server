@@ -1,0 +1,10 @@
+[
+    {
+        "model": "oneleftfootapi.request",
+        "pk": 1,
+        "fields": {
+            "sender_id": 3,
+            "receiver_id": 1
+        }
+    }
+]

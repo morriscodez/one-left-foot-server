@@ -19,7 +19,7 @@ from rest_framework import routers
 from django.conf.urls import include
 from oneleftfootapi.views import login_user, register_user, DanceUserView, DanceTypeView, \
                                     SkillLevelView, DayView, AvailabilityView, PartnerView, \
-                                        DanceTypeJoinView, RoleView, ProfileView
+                                        DanceTypeJoinView, RoleView, ProfileView, RequestView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'danceusers', DanceUserView, 'danceuser')
@@ -31,6 +31,7 @@ router.register(r'partners', PartnerView, 'partner')
 router.register(r'mydances', DanceTypeJoinView, 'mydance')
 router.register(r'roles', RoleView, 'role')
 router.register(r'profile', ProfileView, 'profile')
+router.register(r'requests', RequestView, 'request')
 
 urlpatterns = [
     path('', include(router.urls)),
