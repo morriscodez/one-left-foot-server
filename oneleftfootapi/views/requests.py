@@ -13,7 +13,7 @@ class RequestView(ViewSet):
     def create(self, request):
 
         new_request = Request()
-        sender = DanceUser.objects.get(pk=request.data["senderId"])
+        sender = DanceUser.objects.get(user=request.auth.user)
         receiver = DanceUser.objects.get(pk=request.data["receiverId"])
         
         new_request.sender = sender
