@@ -42,8 +42,16 @@ class ProfileView(ViewSet):
         try:
             dance_user = DanceUser.objects.get(pk=pk)
             
-            serializer = DanceUserSerializer(dance_user, context={'request': request})
-            return Response(serializer.data)
+            requests = Request.objects.filter(receiver=dance_user)
+
+            dance_user.requests = requests
+            
+            try:
+                serializer = DanceUserSerializer(dance_user, context={'request': request})
+                return Response(serializer.data)
+
+            except Request.DoesNotExist as ex:
+                pass
         
         except Exception as ex:
             return HttpResponseServerError(ex)
@@ -92,6 +100,8 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id', 'first_name', 'last_name', 'username', 'email')
 
+
+
 class DancePartnerSerializer(serializers.ModelSerializer):
     user = UserSerializer()
 
@@ -113,6 +123,8 @@ class FollowerSerializer(serializers.ModelSerializer):
         model = Partner()
         fields = ('id', 'leader')
 
+
+
 class RequestUserSerializer(serializers.ModelSerializer):
     user = UserSerializer()
 
@@ -127,6 +139,8 @@ class RequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Request
         fields = ('id', 'sender', 'receiver')
+
+
 
 class DanceUserSerializer(serializers.ModelSerializer):
     user = UserSerializer()
