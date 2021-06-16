@@ -14,5 +14,6 @@ python3 manage.py loaddata roles
 python3 manage.py loaddata dance_type_join
 python3 manage.py loaddata days
 python3 manage.py loaddata availability
+python3 manage.py loaddata requests
 
 
