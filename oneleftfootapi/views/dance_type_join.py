@@ -34,10 +34,10 @@ class DanceTypeJoinView(ViewSet):
     
     def list(self, request):
 
-        new_dances = DanceTypeJoin.objects.all()
+        my_dances = DanceTypeJoin.objects.filter(dance_user__id=request.auth.user.id)
 
         serializer = DanceTypeJoinSerializer(
-            new_dances, many=True, context={'request': request}
+            my_dances, many=True, context={'request': request}
         )
         return Response(serializer.data)
 
