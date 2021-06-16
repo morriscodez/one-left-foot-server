@@ -122,10 +122,11 @@ class RequestUserSerializer(serializers.ModelSerializer):
 
 class RequestSerializer(serializers.ModelSerializer):
     sender = RequestUserSerializer()
+    # receiver = RequestUserSerializer()
 
     class Meta:
         model = Request
-        fields = ('id', 'sender')
+        fields = ('id', 'sender', 'receiver')
 
 class DanceUserSerializer(serializers.ModelSerializer):
     user = UserSerializer()

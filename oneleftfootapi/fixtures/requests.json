@@ -14,5 +14,13 @@
             "sender_id": 9,
             "receiver_id": 1
         }
+    },
+    {
+        "model": "oneleftfootapi.request",
+        "pk": 3,
+        "fields": {
+            "sender_id": 16,
+            "receiver_id": 1
+        }
     }
 ]
