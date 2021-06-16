@@ -44,9 +44,9 @@ class DanceTypeJoinView(ViewSet):
     
     def retrieve(self, request, pk=None):
         try:
-            new_dance = DanceTypeJoin.objects.get(pk=pk)
+            my_dances = DanceTypeJoin.objects.filter(dance_user__id=pk)
             
-            serializer = DanceTypeJoinSerializer(new_dance, context={'request': request})
+            serializer = DanceTypeJoinSerializer(my_dances, many=True, context={'request': request})
             return Response(serializer.data)
         
         except Exception as ex:
