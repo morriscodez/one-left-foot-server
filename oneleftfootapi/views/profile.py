@@ -1,3 +1,4 @@
+from oneleftfootapi.models.days import Day
 from oneleftfootapi.models.partners import Partner
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
@@ -140,11 +141,12 @@ class RequestSerializer(serializers.ModelSerializer):
         model = Request
         fields = ('id', 'sender', 'receiver')
 
-class AvailabilitySerializer(serializers.ModelSerializer):
 
+class AvailabilitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Availability
         fields = ('id', 'day', 'start', 'end')
+        depth = 1
 
 
 class DanceUserSerializer(serializers.ModelSerializer):
