@@ -128,3 +128,4 @@ class AvailabilitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Availability
         fields = ('id', 'dance_user', 'day', 'start', 'end')
+        depth = 1
