@@ -14,8 +14,8 @@ class DanceTypeJoinView(ViewSet):
     def create(self, request):
 
         new_dance = DanceTypeJoin()
-        dancer = DanceUser.objects.get(pk=request.data["danceUserId"])
-        type = DanceType().objects.get(pk=request.data["danceTypeId"])
+        dancer = DanceUser.objects.get(user=request.auth.user)
+        type = DanceType.objects.get(pk=request.data["danceTypeId"])
         skill = SkillLevel.objects.get(pk=request.data["skillLevelId"])
         role = Role.objects.get(pk=request.data["roleId"])
 
