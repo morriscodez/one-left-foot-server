@@ -4,7 +4,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from oneleftfootapi.models import DanceUser, Partner, Request
+from oneleftfootapi.models import DanceUser, Partner, Request, Availability
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 
@@ -140,6 +140,11 @@ class RequestSerializer(serializers.ModelSerializer):
         model = Request
         fields = ('id', 'sender', 'receiver')
 
+class AvailabilitySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Availability
+        fields = ('id', 'day', 'start', 'end')
 
 
 class DanceUserSerializer(serializers.ModelSerializer):
@@ -147,8 +152,10 @@ class DanceUserSerializer(serializers.ModelSerializer):
     leader = LeaderSerializer(many=True)
     follower = FollowerSerializer(many=True)
     requests = RequestSerializer(many=True)
+    availability_set = AvailabilitySerializer(many=True)
+
 
     class Meta:
         model = DanceUser
-        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower', 'requests')
+        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower', 'requests', 'availability_set')
         depth = 2
