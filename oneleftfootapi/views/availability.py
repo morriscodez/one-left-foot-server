@@ -7,6 +7,8 @@ from rest_framework import status
 from oneleftfootapi.models import Availability, DanceUser, Day
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from rest_framework.decorators import action
+
 
 class AvailabilityView(ViewSet):
 
@@ -32,11 +34,27 @@ class AvailabilityView(ViewSet):
     def list(self, request):
 
         windows = Availability.objects.all()
-
+        
         serializer = AvailabilitySerializer(
             windows, many=True, context={'request': request}
         )
         return Response(serializer.data)
+
+    
+    @action(methods=['get'], detail=False)
+    def myavailability(self, request, pk=None):
+        
+        if request.method == "GET":
+            windows = Availability.objects.filter(dance_user__id=request.auth.user.id)
+
+        try:
+            serializer = AvailabilitySerializer(
+                windows, many=True, context={'request': request}
+                )
+            return Response(serializer.data)
+
+        except Exception as ex:
+            return HttpResponseServerError(ex)
 
     
     def retrieve(self, request, pk=None):
