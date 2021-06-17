@@ -15,8 +15,8 @@ class AvailabilityView(ViewSet):
     def create(self, request):
 
         window = Availability()
-        dancer = DanceUser.objects.get(pk=request.data["danceUserId"])
-        day = Day().objects.get(pk=request.data["dayId"])
+        dancer = DanceUser.objects.get(user=request.auth.user)
+        day = Day.objects.get(pk=request.data["dayId"])
         
         window.start = request.data["start"]
         window.end = request.data["end"]
