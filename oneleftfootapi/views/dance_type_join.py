@@ -1,3 +1,4 @@
+from rest_framework.decorators import action
 from oneleftfootapi.views.dance_type import DanceTypeSerializer
 from django.db.models.fields import PositiveSmallIntegerField
 from django.http import HttpResponseServerError
@@ -5,7 +6,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from oneleftfootapi.models import DanceTypeJoin, DanceUser, DanceType, SkillLevel, Role
+from oneleftfootapi.models import DanceTypeJoin, DanceUser, DanceType, SkillLevel, Role, dance_type
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
@@ -32,10 +33,17 @@ class DanceTypeJoinView(ViewSet):
         except ValidationError as ex:
             return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
     
+    
     def list(self, request):
 
         my_dances = DanceTypeJoin.objects.filter(dance_user__id=request.auth.user.id)
 
+        danceId = self.request.query_params.get("dance", None)
+        if danceId is not None:
+            my_dances = DanceTypeJoin.objects.filter(dance_type__id=danceId)
+
+            
+        
         serializer = DanceTypeJoinSerializer(
             my_dances, many=True, context={'request': request}
         )
@@ -128,7 +136,7 @@ class DanceUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DanceUser
-        fields = ('id', 'bio', 'user')
+        fields = ('id', 'bio', 'img', 'user')
 
 
 class DanceTypeJoinSerializer(serializers.ModelSerializer):
