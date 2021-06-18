@@ -136,7 +136,7 @@ class DanceUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DanceUser
-        fields = ('id', 'bio', 'user')
+        fields = ('id', 'bio', 'img', 'user')
 
 
 class DanceTypeJoinSerializer(serializers.ModelSerializer):
