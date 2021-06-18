@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import environ
+import cloudinary
 
 env = environ.Env()
 environ.Env.read_env()
@@ -45,9 +46,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'oneleftfootapi',
     'cloudinary',
+    'oneleftfootapi',
 ]
+
+
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dcmrgodiq',
