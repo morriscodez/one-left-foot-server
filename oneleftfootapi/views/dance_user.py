@@ -5,7 +5,11 @@ from rest_framework import serializers
 from rest_framework import status
 from oneleftfootapi.models import DanceUser
 from django.contrib.auth.models import User
+import cloudinary
+import environ
 
+env = environ.Env()
+environ.Env.read_env()
 
 
 
@@ -38,10 +42,15 @@ class DanceUserView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        
+        cloudinary.config(cloud_name='dcmrgodiq',
+                api_key=env("CLOUDINARY_API_KEY"),
+                api_secret=env('CLOUDINARY_SECRET_KEY'))
+
         user = DanceUser.objects.get(pk=pk)
         user.bio = request.data["bio"]
-        user.img = request.data["img"]
+        img = cloudinary.uploader.upload(request.data["img"], folder= "one-left-foot")
+        user.img = img["url"]
+
         
         user.save()
     
