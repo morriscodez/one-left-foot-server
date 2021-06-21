@@ -21,8 +21,6 @@ class PartnerView(ViewSet):
         partnership.follower = follower
         
 
-        
-
         try:
             partnership.save()
             serializer = PartnerSerializer(partnership, context={'request': request})

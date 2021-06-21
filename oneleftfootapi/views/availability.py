@@ -51,9 +51,6 @@ class AvailabilityView(ViewSet):
 
         windows = Availability.objects.all()
 
-        # dancer = self.request.query_params('userId', None)
-        # if dancer is not None:
-        #     windows = Availability.objects.filter(dance_user__id=dancer)
         
         serializer = AvailabilitySerializer(
             windows, many=True, context={'request': request}
