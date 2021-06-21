@@ -8,6 +8,7 @@ from oneleftfootapi.models import Availability, DanceUser, Day
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from rest_framework.decorators import action
+import datetime
 
 
 class AvailabilityView(ViewSet):
@@ -22,8 +23,23 @@ class AvailabilityView(ViewSet):
         window.end = request.data["end"]
         window.dance_user = dancer
         window.day = day
+        
+        start_time_object = datetime.datetime.strptime(window.start, '%H:%M').time()
+        end_time_object = datetime.datetime.strptime(window.end, '%H:%M').time()
 
         try:
+            
+            todays_availabilities = dancer.availability_set.filter(day=day)
+
+            for availability_window in todays_availabilities:
+                if start_time_object >= availability_window.start and start_time_object <= availability_window.end:
+
+                    return Response({"reason": "Overlapping availability range."}, status=status.HTTP_400_BAD_REQUEST)
+
+                if end_time_object >= availability_window.start and end_time_object <= availability_window.end:
+
+                    return Response({"reason": "Overlapping availability range."}, status=status.HTTP_400_BAD_REQUEST)
+            
             window.save()
             serializer = AvailabilitySerializer(window, context={'request': request})
             return Response(serializer.data)
@@ -35,9 +51,6 @@ class AvailabilityView(ViewSet):
 
         windows = Availability.objects.all()
 
-        # dancer = self.request.query_params('userId', None)
-        # if dancer is not None:
-        #     windows = Availability.objects.filter(dance_user__id=dancer)
         
         serializer = AvailabilitySerializer(
             windows, many=True, context={'request': request}

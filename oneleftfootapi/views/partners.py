@@ -7,6 +7,7 @@ from rest_framework import status
 from oneleftfootapi.models import Partner, DanceUser
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.db import IntegrityError
 
 class PartnerView(ViewSet):
 
@@ -19,7 +20,6 @@ class PartnerView(ViewSet):
         partnership.leader = leader
         partnership.follower = follower
         
-        
 
         try:
             partnership.save()
@@ -28,6 +28,10 @@ class PartnerView(ViewSet):
         
         except ValidationError as ex:
             return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
+
+        except IntegrityError as ex:
+            return Response({"reason": "Already practice partners"}, status=status.HTTP_400_BAD_REQUEST) 
+
     
     def list(self, request):
 

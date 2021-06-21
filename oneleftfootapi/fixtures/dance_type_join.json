@@ -71,16 +71,6 @@
     },
     {
         "model": "oneleftfootapi.dancetypejoin",
-        "pk": 8,
-        "fields": {
-            "dance_user_id": 3,
-            "dance_type_id": 7,
-            "skill_level_id": 1,
-            "role": 2
-        }
-    },
-    {
-        "model": "oneleftfootapi.dancetypejoin",
         "pk": 9,
         "fields": {
             "dance_user_id": 15,

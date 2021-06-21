@@ -9,6 +9,7 @@ from rest_framework import status
 from oneleftfootapi.models import DanceTypeJoin, DanceUser, DanceType, SkillLevel, Role, dance_type
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.db import IntegrityError
 
 class DanceTypeJoinView(ViewSet):
 
@@ -26,12 +27,18 @@ class DanceTypeJoinView(ViewSet):
         new_dance.role = role
 
         try:
+            
+            
+            
             new_dance.save()
             serializer = DanceTypeJoinSerializer(new_dance, context={'request': request})
             return Response(serializer.data)
         
         except ValidationError as ex:
             return Response({"reason": ex.message}, status=status.HTTP_400_BAD_REQUEST)
+
+        except IntegrityError as ex:
+            return Response({"reason": "Already added to your dances"}, status=status.HTTP_400_BAD_REQUEST)
     
     
     def list(self, request):
