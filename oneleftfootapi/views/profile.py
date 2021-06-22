@@ -48,12 +48,14 @@ class ProfileView(ViewSet):
             requests = Request.objects.filter(receiver=dance_user)
 
             dance_user.pending_request = False
-            
-            pending_request = Request.objects.get(receiver=pk, sender=request.auth.user.id)
-            if pending_request is not None:
-                dance_user.pending_request = True
-
             dance_user.requests = requests
+            
+            try:
+                pending_request = Request.objects.get(receiver=pk, sender=request.auth.user.id)
+                if pending_request is not None:
+                    dance_user.pending_request = True
+            except Request.DoesNotExist:
+                pass
 
             dance_user.availability_set.order_by('day')
 
