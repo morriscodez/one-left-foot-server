@@ -1,0 +1,1 @@
+web: gunicorn oneleftfoot.wsgi --log-file -
