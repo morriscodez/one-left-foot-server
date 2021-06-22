@@ -38,5 +38,15 @@
             "start": "13:00",
             "end": "16:00"
         }
+    },
+    {
+        "model": "oneleftfootapi.availability",
+        "pk": 5,
+        "fields": {
+            "dance_user_id": 3,
+            "day_id": 3,
+            "start": "13:00",
+            "end": "16:00"
+        }
     }
 ]

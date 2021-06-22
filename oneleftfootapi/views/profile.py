@@ -20,6 +20,8 @@ class ProfileView(ViewSet):
         try:
             dance_user = DanceUser.objects.get(user=request.auth.user)
 
+            dance_user.availability_set.order_by('day')
+
             try:
                 requests = Request.objects.filter(receiver=dance_user)
 
@@ -46,6 +48,8 @@ class ProfileView(ViewSet):
             requests = Request.objects.filter(receiver=dance_user)
 
             dance_user.requests = requests
+
+            dance_user.availability_set.order_by('day')
             
             try:
                 serializer = DanceUserSerializer(dance_user, context={'request': request})
