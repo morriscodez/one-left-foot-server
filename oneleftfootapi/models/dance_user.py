@@ -15,3 +15,21 @@ class DanceUser(models.Model):
     @requests.setter
     def requests(self, value):
         self.__requests = value
+
+    
+    @property
+    def already_follower(self):
+        return self.__already_follower
+
+    @already_follower.setter
+    def already_follower(self, value):  
+        self.__already_follower = value
+    
+    
+    @property
+    def already_leader(self):
+        return self.__already_leader
+
+    @already_leader.setter
+    def already_leader(self, value):  
+        self.__already_leader = value

@@ -50,6 +50,19 @@ class ProfileView(ViewSet):
             dance_user.requests = requests
 
             dance_user.availability_set.order_by('day')
+
+            dance_user.already_follower = False
+            dance_user.already_leader = False
+            
+            auth_user = DanceUser.objects.get(user = request.auth.user)
+            if dance_user.follower.filter(leader=auth_user):
+                dance_user.already_follower = True
+            
+            auth_user = DanceUser.objects.get(user = request.auth.user)
+            if dance_user.leader.filter(follower=auth_user):
+                dance_user.already_leader = True
+
+
             
             try:
                 serializer = DanceUserSerializer(dance_user, context={'request': request})
@@ -163,5 +176,5 @@ class DanceUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DanceUser
-        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower', 'requests', 'availability_set')
+        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower', 'requests', 'availability_set', 'already_follower', 'already_leader')
         depth = 2
