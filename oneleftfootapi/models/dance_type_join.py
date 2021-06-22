@@ -10,4 +10,4 @@ class DanceTypeJoin(models.Model):
     role = models.ForeignKey("Role", on_delete=models.CASCADE)
 
     class Meta:
-        unique_together = ("dance_user", "dance_type")
+        unique_together = ("dance_user", "dance_type", "role")

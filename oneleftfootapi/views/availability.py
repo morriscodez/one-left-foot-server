@@ -34,11 +34,11 @@ class AvailabilityView(ViewSet):
             for availability_window in todays_availabilities:
                 if start_time_object >= availability_window.start and start_time_object <= availability_window.end:
 
-                    return Response({"reason": "Overlapping availability range."}, status=status.HTTP_400_BAD_REQUEST)
+                    return Response({"reason": "Overlapping availability range. Please choose a start time and end time that do not overlap with another availability window for this day"}, status=status.HTTP_400_BAD_REQUEST)
 
                 if end_time_object >= availability_window.start and end_time_object <= availability_window.end:
 
-                    return Response({"reason": "Overlapping availability range."}, status=status.HTTP_400_BAD_REQUEST)
+                    return Response({"reason": "Overlapping availability range. Please choose a start time and end time that do not overlap with another availability window for this day"}, status=status.HTTP_400_BAD_REQUEST)
             
             window.save()
             serializer = AvailabilitySerializer(window, context={'request': request})

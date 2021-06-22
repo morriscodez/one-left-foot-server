@@ -80,13 +80,17 @@ class PartnerView(ViewSet):
             Response -- 200, 404, or 500 status code
         """
         try:
-            partnership = Partner.objects.get(pk=pk)
+            partnership = Partner.objects.get(leader__id=request.auth.user.id, follower__id=pk)
             partnership.delete()
 
             return Response({}, status=status.HTTP_204_NO_CONTENT)
 
         except Partner.DoesNotExist as ex:
-            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+            
+            partnership = Partner.objects.get(follower__id=request.auth.user.id, leader__id=pk)
+            partnership.delete()
+
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
 
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -1,49 +1,49 @@
 [
     {
         "model": "oneleftfootapi.day",
-        "pk": 1,
+        "pk": 2,
         "fields": {
             "day": "Monday"
         }
     },
     {
         "model": "oneleftfootapi.day",
-        "pk": 2,
+        "pk": 3,
         "fields": {
             "day": "Tuesday"
         }
     },
     {
         "model": "oneleftfootapi.day",
-        "pk": 3,
+        "pk": 4,
         "fields": {
             "day": "Wednesday"
         }
     },
     {
         "model": "oneleftfootapi.day",
-        "pk": 4,
+        "pk": 5,
         "fields": {
             "day": "Thursday"
         }
     },
     {
         "model": "oneleftfootapi.day",
-        "pk": 5,
+        "pk": 6,
         "fields": {
             "day": "Friday"
         }
     },
     {
         "model": "oneleftfootapi.day",
-        "pk": 6,
+        "pk": 7,
         "fields": {
             "day": "Saturday"
         }
     },
     {
         "model": "oneleftfootapi.day",
-        "pk": 7,
+        "pk": 1,
         "fields": {
             "day": "Sunday"
         }
