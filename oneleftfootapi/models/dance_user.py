@@ -33,3 +33,12 @@ class DanceUser(models.Model):
     @already_leader.setter
     def already_leader(self, value):  
         self.__already_leader = value
+
+
+    @property
+    def pending_request(self):
+        return self.__pending_request
+
+    @pending_request.setter
+    def pending_request(self, value):
+        self.__pending_request = value

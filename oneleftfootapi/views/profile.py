@@ -47,6 +47,12 @@ class ProfileView(ViewSet):
             
             requests = Request.objects.filter(receiver=dance_user)
 
+            dance_user.pending_request = False
+            
+            pending_request = Request.objects.get(receiver=pk, sender=request.auth.user.id)
+            if pending_request is not None:
+                dance_user.pending_request = True
+
             dance_user.requests = requests
 
             dance_user.availability_set.order_by('day')
@@ -61,7 +67,6 @@ class ProfileView(ViewSet):
             auth_user = DanceUser.objects.get(user = request.auth.user)
             if dance_user.leader.filter(follower=auth_user):
                 dance_user.already_leader = True
-
 
             
             try:
@@ -176,5 +181,5 @@ class DanceUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DanceUser
-        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower', 'requests', 'availability_set', 'already_follower', 'already_leader')
+        fields = ('id', 'bio', 'img', 'user', 'leader', 'follower', 'requests', 'availability_set', 'already_follower', 'already_leader', 'pending_request')
         depth = 2
