@@ -8,3 +8,6 @@ class Availability(models.Model):
     day = models.ForeignKey("Day", on_delete=CASCADE)
     start = models.TimeField(auto_now=False, auto_now_add=False)
     end = models.TimeField(auto_now=False, auto_now_add=False)
+
+    class Meta:
+        ordering = ['day']

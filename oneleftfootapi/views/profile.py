@@ -20,7 +20,7 @@ class ProfileView(ViewSet):
         try:
             dance_user = DanceUser.objects.get(user=request.auth.user)
 
-            dance_user.availability_set.order_by('day')
+            dance_user.availability_set.set(dance_user.availability_set.order_by('day'))
 
             try:
                 requests = Request.objects.filter(receiver=dance_user)
