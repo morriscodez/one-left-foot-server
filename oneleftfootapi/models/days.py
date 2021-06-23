@@ -2,4 +2,4 @@ from django.db import models
 
 class Day(models.Model):
 
-    day = models.CharField(max_length=8)
+    day = models.CharField(max_length=9)
