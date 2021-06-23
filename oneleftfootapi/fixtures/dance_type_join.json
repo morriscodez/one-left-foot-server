@@ -244,7 +244,7 @@
         "pk": 26,
         "fields": {
             "dance_user_id": 4,
-            "dance_type_id": 8,
+            "dance_type_id": 5,
             "skill_level_id": 3,
             "role": 2
         }
