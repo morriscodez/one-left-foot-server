@@ -3,7 +3,7 @@
         "model": "oneleftfootapi.danceuser",
         "pk": 1,
         "fields": {
-            "user": 2,
+            "user": 18,
             "bio": "Now, you'll hurt me if you don't trust me, alright?",
             "img": "v1623339270/One-Left-Foot/swayze_gmzgvp.jpg"
         }
