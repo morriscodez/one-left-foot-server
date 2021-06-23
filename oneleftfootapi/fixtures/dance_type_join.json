@@ -198,5 +198,585 @@
             "skill_level_id": 2,
             "role": 1
         }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 22,
+        "fields": {
+            "dance_user_id": 3,
+            "dance_type_id": 1,
+            "skill_level_id": 1,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 23,
+        "fields": {
+            "dance_user_id": 3,
+            "dance_type_id": 2,
+            "skill_level_id": 1,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 24,
+        "fields": {
+            "dance_user_id": 3,
+            "dance_type_id": 6,
+            "skill_level_id": 1,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 25,
+        "fields": {
+            "dance_user_id": 4,
+            "dance_type_id": 4,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 26,
+        "fields": {
+            "dance_user_id": 4,
+            "dance_type_id": 8,
+            "skill_level_id": 3,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 27,
+        "fields": {
+            "dance_user_id": 4,
+            "dance_type_id": 17,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 28,
+        "fields": {
+            "dance_user_id": 5,
+            "dance_type_id": 2,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 29,
+        "fields": {
+            "dance_user_id": 5,
+            "dance_type_id": 4,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 30,
+        "fields": {
+            "dance_user_id": 5,
+            "dance_type_id": 5,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 31,
+        "fields": {
+            "dance_user_id": 6,
+            "dance_type_id": 7,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 32,
+        "fields": {
+            "dance_user_id": 6,
+            "dance_type_id": 15,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 33,
+        "fields": {
+            "dance_user_id": 6,
+            "dance_type_id": 10,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 34,
+        "fields": {
+            "dance_user_id": 6,
+            "dance_type_id": 16,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 35,
+        "fields": {
+            "dance_user_id": 7,
+            "dance_type_id": 16,
+            "skill_level_id": 3,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 35,
+        "fields": {
+            "dance_user_id": 7,
+            "dance_type_id": 15,
+            "skill_level_id": 3,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 36,
+        "fields": {
+            "dance_user_id": 7,
+            "dance_type_id": 23,
+            "skill_level_id": 3,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 37,
+        "fields": {
+            "dance_user_id": 7,
+            "dance_type_id": 22,
+            "skill_level_id": 3,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 38,
+        "fields": {
+            "dance_user_id": 7,
+            "dance_type_id": 12,
+            "skill_level_id": 3,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 39,
+        "fields": {
+            "dance_user_id": 7,
+            "dance_type_id": 13,
+            "skill_level_id": 3,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 40,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 8,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 41,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 8,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 42,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 10,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 43,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 9,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 44,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 7,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 45,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 1,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 46,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 2,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 47,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 11,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 48,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 14,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 49,
+        "fields": {
+            "dance_user_id": 8,
+            "dance_type_id": 19,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 49,
+        "fields": {
+            "dance_user_id": 9,
+            "dance_type_id": 2,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 50,
+        "fields": {
+            "dance_user_id": 9,
+            "dance_type_id": 17,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 51,
+        "fields": {
+            "dance_user_id": 10,
+            "dance_type_id": 1,
+            "skill_level_id": 1,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 52,
+        "fields": {
+            "dance_user_id": 10,
+            "dance_type_id": 2,
+            "skill_level_id": 1,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 53,
+        "fields": {
+            "dance_user_id": 11,
+            "dance_type_id": 1,
+            "skill_level_id": 1,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 53,
+        "fields": {
+            "dance_user_id": 11,
+            "dance_type_id": 2,
+            "skill_level_id": 1,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 54,
+        "fields": {
+            "dance_user_id": 12,
+            "dance_type_id": 15,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 55,
+        "fields": {
+            "dance_user_id": 13,
+            "dance_type_id": 15,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 56,
+        "fields": {
+            "dance_user_id": 14,
+            "dance_type_id": 1,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 57,
+        "fields": {
+            "dance_user_id": 14,
+            "dance_type_id": 2,
+            "skill_level_id": 2,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 58,
+        "fields": {
+            "dance_user_id": 14,
+            "dance_type_id": 15,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 59,
+        "fields": {
+            "dance_user_id": 15,
+            "dance_type_id": 15,
+            "skill_level_id": 3,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 60,
+        "fields": {
+            "dance_user_id": 15,
+            "dance_type_id": 18,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 61,
+        "fields": {
+            "dance_user_id": 15,
+            "dance_type_id": 20,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 62,
+        "fields": {
+            "dance_user_id": 15,
+            "dance_type_id": 21,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 63,
+        "fields": {
+            "dance_user_id": 15,
+            "dance_type_id": 22,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 64,
+        "fields": {
+            "dance_user_id": 15,
+            "dance_type_id": 23,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 65,
+        "fields": {
+            "dance_user_id": 15,
+            "dance_type_id": 1,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 66,
+        "fields": {
+            "dance_user_id": 15,
+            "dance_type_id": 2,
+            "skill_level_id": 2,
+            "role": 2
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 67,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 2,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 68,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 1,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 69,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 3,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 70,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 18,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 71,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 19,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 72,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 15,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 73,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 14,
+            "skill_level_id": 1,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 74,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 13,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 75,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 12,
+            "skill_level_id": 3,
+            "role": 1
+        }
+    },
+    {
+        "model": "oneleftfootapi.dancetypejoin",
+        "pk": 75,
+        "fields": {
+            "dance_user_id": 16,
+            "dance_type_id": 11,
+            "skill_level_id": 3,
+            "role": 1
+        }
     }
 ]
