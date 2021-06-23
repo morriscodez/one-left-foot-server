@@ -404,7 +404,7 @@
         "pk": 41,
         "fields": {
             "dance_user_id": 8,
-            "dance_type_id": 8,
+            "dance_type_id": 9git,
             "skill_level_id": 2,
             "role": 2
         }
