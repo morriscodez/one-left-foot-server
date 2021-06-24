@@ -32,4 +32,6 @@ Ballroom dance is difficult to master. Practice partners make the process more e
  
 5. ###### Input your Cloudinary name, api, and api secret in the ```.env.example``` file, then remove ```.example``` from the file and add ```.env``` to the ```gitignore```
 
+6. ###### ```python3 manage.py runserver``` for local server
+
 
