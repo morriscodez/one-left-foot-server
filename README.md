@@ -21,6 +21,12 @@ Ballroom dance is difficult to master. Practice partners make the process more e
 pip3 install --user pipx
 pipx install pipenv
 ```
-
+3. ###### Cloudinary & Pillow
+``` 
+pipenv install cloudinary
+```
+```
+pip install Pillow
+```
 
 
