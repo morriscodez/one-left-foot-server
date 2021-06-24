@@ -13,7 +13,8 @@ Ballroom dance is difficult to master. Practice partners make the process more e
 
 ## Set Up
 
-1. ```git clone git@github.com:morriscodez/one-left-foot-server.git```
+1. ###### Clone Repo
+```git clone git@github.com:morriscodez/one-left-foot-server.git```
 
 2. ###### Virtual Environment with ```pipenv```
  
