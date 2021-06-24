@@ -13,24 +13,24 @@ Ballroom dance is difficult to master. Practice partners make the process more e
 
 ## Set Up
 
-1. ###### Clone Repo:
+1.  Clone Repo:
    ```git clone git@github.com:morriscodez/one-left-foot-server.git```
 
-2. ###### Virtual Environment with ```pipenv```
+2.  Virtual Environment with ```pipenv```
  
    ```
    pip3 install --user pipx
    pipx install pipenv
    ```
-3. ###### Run this command to install packages in the Pipfile
+3. Run this command to install packages in the Pipfile
    ``` 
    pipenv install 
    ```
   
 
-4. ###### Make an account with Cloudinary
+4.  Make an account with Cloudinary
  
-5. ###### Input your Cloudinary name, api, and api secret in the ```.env.example``` file, then remove ```.example``` from the file and add ```.env``` to the ```gitignore```
+5.  Input your Cloudinary name, api, and api secret in the ```.env.example``` file, then remove ```.example``` from the file and add ```.env``` to the ```gitignore```
 
 6. Generate Django Secret Key
    - Run this command in terminal:
@@ -42,6 +42,6 @@ Ballroom dance is difficult to master. Practice partners make the process more e
    - Copy the secret key output from terminal and pase it into your ```.env``` file as a value to ```SECRET_KEY=<paste random key output here>```
    
 
-7. ###### ```python3 manage.py runserver``` for local server
+7.  ```python3 manage.py runserver``` for local server
 
 
