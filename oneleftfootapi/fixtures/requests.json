@@ -3,7 +3,7 @@
         "model": "oneleftfootapi.request",
         "pk": 1,
         "fields": {
-            "sender_id": 3,
+            "sender_id": 12,
             "receiver_id": 1
         }
     },
