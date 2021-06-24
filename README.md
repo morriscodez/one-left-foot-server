@@ -39,7 +39,7 @@ Ballroom dance is difficult to master. Practice partners make the process more e
      python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 
      ```
-   - Copy the secret key output form terminal and pase it into your ```.env``` file as a value to ```SECRET_KEY=<paste random key output here>```
+   - Copy the secret key output from terminal and pase it into your ```.env``` file as a value to ```SECRET_KEY=<paste random key output here>```
    
 
 7. ###### ```python3 manage.py runserver``` for local server
