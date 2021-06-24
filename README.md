@@ -22,7 +22,7 @@ Ballroom dance is difficult to master. Practice partners make the process more e
    pip3 install --user pipx
    pipx install pipenv
    ```
-3. ###### Installing Packages in Pipfile
+3. ###### Run this command to install packages in the Pipfile
    ``` 
    pipenv install 
    ```
