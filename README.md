@@ -32,6 +32,15 @@ Ballroom dance is difficult to master. Practice partners make the process more e
  
 5. ###### Input your Cloudinary name, api, and api secret in the ```.env.example``` file, then remove ```.example``` from the file and add ```.env``` to the ```gitignore```
 
-6. ###### ```python3 manage.py runserver``` for local server
+6. Generate Django Secret Key
+   - Run this command in terminal:
+   ```
+  python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+
+   ```
+   - Copy the secret key output form terminal and pase it into your ```.env``` file as a value to ```SECRET_KEY=<paste random key output here>```
+   
+
+7. ###### ```python3 manage.py runserver``` for local server
 
 
