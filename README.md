@@ -22,12 +22,14 @@ Ballroom dance is difficult to master. Practice partners make the process more e
    pip3 install --user pipx
    pipx install pipenv
    ```
-3. ###### Cloudinary & Pillow
+3. ###### Installing Packages in Pipfile
    ``` 
-   pipenv install cloudinary
+   pipenv install 
    ```
-   ```
-   pip install Pillow
-   ```
+  
+
+4. ###### Make an account with Cloudinary
+ 
+5. ###### Input your Cloudinary name, api, and api secret in the ```.env.example``` file, then remove ```.example``` from the file and add ```.env``` to the ```gitignore```
 
 
