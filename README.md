@@ -34,10 +34,11 @@ Ballroom dance is difficult to master. Practice partners make the process more e
 
 6. Generate Django Secret Key
    - Run this command in terminal:
-   ```
+   
+  ```
   python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 
-   ```
+  ```
    - Copy the secret key output form terminal and pase it into your ```.env``` file as a value to ```SECRET_KEY=<paste random key output here>```
    
 
