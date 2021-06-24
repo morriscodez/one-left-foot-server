@@ -61,8 +61,10 @@ class AvailabilityView(ViewSet):
     @action(methods=['get'], detail=False)
     def myavailability(self, request, pk=None):
         
+        auth_user = DanceUser.objects.get(user=request.auth.user)
+        
         if request.method == "GET":
-            windows = Availability.objects.filter(dance_user__id=request.auth.user.id)
+            windows = Availability.objects.filter(dance_user__id=auth_user.id)
 
         try:
             serializer = AvailabilitySerializer(

@@ -50,8 +50,9 @@ class ProfileView(ViewSet):
             dance_user.pending_request = False
             dance_user.requests = requests
             
+            auth_user = DanceUser.objects.get(user=request.auth.user)
             try:
-                pending_request = Request.objects.get(receiver=pk, sender=request.auth.user.id)
+                pending_request = Request.objects.get(receiver=pk, sender=auth_user.id)
                 if pending_request is not None:
                     dance_user.pending_request = True
             except Request.DoesNotExist:

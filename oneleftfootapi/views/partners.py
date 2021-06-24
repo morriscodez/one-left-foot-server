@@ -79,15 +79,17 @@ class PartnerView(ViewSet):
         Returns:
             Response -- 200, 404, or 500 status code
         """
+        auth_user = DanceUser.objects.get(user=request.auth.user)
         try:
-            partnership = Partner.objects.get(leader__id=request.auth.user.id, follower__id=pk)
+            partnership = Partner.objects.get(leader__id=auth_user.id, follower__id=pk)
             partnership.delete()
 
             return Response({}, status=status.HTTP_204_NO_CONTENT)
 
         except Partner.DoesNotExist as ex:
             
-            partnership = Partner.objects.get(follower__id=request.auth.user.id, leader__id=pk)
+            
+            partnership = Partner.objects.get(follower__id=auth_user.id, leader__id=pk)
             partnership.delete()
 
             return Response({}, status=status.HTTP_204_NO_CONTENT)

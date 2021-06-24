@@ -43,7 +43,8 @@ class DanceTypeJoinView(ViewSet):
     
     def list(self, request):
 
-        my_dances = DanceTypeJoin.objects.filter(dance_user__id=request.auth.user.id)
+        auth_user = DanceUser.objects.get(user=request.auth.user)
+        my_dances = DanceTypeJoin.objects.filter(dance_user__id=auth_user.id)
 
         danceId = self.request.query_params.get("dance", None)
         if danceId is not None:
