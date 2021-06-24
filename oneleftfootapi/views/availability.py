@@ -143,6 +143,8 @@ class DanceUserSerializer(serializers.ModelSerializer):
 
 class AvailabilitySerializer(serializers.ModelSerializer):
     dance_user = DanceUserSerializer()
+    start=serializers.TimeField(format='%I:%M %p', input_formats='%I:%M %p',)
+    end=serializers.TimeField(format='%I:%M %p', input_formats='%I:%M %p',)
 
     class Meta:
         model = Availability
