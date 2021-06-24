@@ -15,9 +15,8 @@ Ballroom dance is difficult to master. Practice partners make the process more e
 
 1. ```git clone git@github.com:morriscodez/one-left-foot-server.git```
 
-###### Virtual Environment with ```pipenv```
-
-2. 
+2. ###### Virtual Environment with ```pipenv```
+ 
 ```
 pip3 install --user pipx
 pipx install pipenv
