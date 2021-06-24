@@ -17,9 +17,9 @@ Ballroom dance is difficult to master. Practice partners make the process more e
 
 ###### Virtual Environment with ```pipenv```
 
-2. ```pip3 install --user pipx
-      pipx install pipenv
-       ```
+2. 
+```pip3 install --user pipx
+   pipx install pipenv```
 
 
 
