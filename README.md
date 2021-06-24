@@ -13,15 +13,15 @@ Ballroom dance is difficult to master. Practice partners make the process more e
 
 ## Set Up
 
-1. ###### Clone Repo
-```git clone git@github.com:morriscodez/one-left-foot-server.git```
+1. ###### Clone Repo:
+   ```git clone git@github.com:morriscodez/one-left-foot-server.git```
 
 2. ###### Virtual Environment with ```pipenv```
  
-```
-pip3 install --user pipx
-pipx install pipenv
-```
+   ```
+   pip3 install --user pipx
+   pipx install pipenv
+   ```
 3. ###### Cloudinary & Pillow
 ``` 
 pipenv install cloudinary
